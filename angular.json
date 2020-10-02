@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "ng-element-proto"
+  "defaultProject": "ng-element-proto",
+  "cli": {
+    "analytics": false
+  }
 }
