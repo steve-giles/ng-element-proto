@@ -1,3 +1,30 @@
 <h1>Frontend Document Template System (DTS)</h1>
 
-This is a Custom Angular Element which would be used to manage certificate templates.
+<div class="p-2">
+  Status to DTS Service: {{status}}
+</div>
+
+<form [formGroup]="editTemplate">
+  <div class="input-group p-2">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Template ID</span>
+    </div>
+    <input name="templateId" required formControlName="templateId">
+    <button type="button" class="btn btn-primary" (click)="lookup()">Lookup</button>
+    <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+  </div>
+  <hr>
+  <div class="row">
+    <section class="column">
+      <h2>Template Editor</h2>
+      <textarea rows="20" cols="60" name="templateText" formControlName="templateText"></textarea>
+    </section>
+    <section class="column">
+      <h2>Certificate Preview</h2>
+      <div [innerHTML]="template"></div>
+    </section>
+  </div>
+</form>
+
+
+
